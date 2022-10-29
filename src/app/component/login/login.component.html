@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col p-0 ">
+    <main class="d-flex justify-content-center align-items-center bg-dark  ">
+
+
+
+      <div class="card mb-3 shadow-sm  mb-5  rounded text-bg-dark col-lg-12 col-md-6 col-sm-6"
+        style="max-width: 800px;min-width: 200px;">
+        <div class="row g-0">
+          <h5 class="card-title h1 d-flex align-items-center justify-content-center">Login</h5>
+          <div class="col-md-6 col-lg-12 col-sm-6 d-flex  justify-content-center">
+            <img src="../../../assets/img/door-open.svg" class="img-fluid rounded-start m-3 " alt="...">
+          </div>
+          <div class="col-md-12 col-lg-12 ">
+
+            <form class="d-flex  flex-column  mb-3 justify-content-center align-items-center needs-validation"
+              #needsvalidation>
+              <div class="mb-3 col-lg-6">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input style="max-width: 800;min-width:  200px;" type="email" class="form-control"
+                  id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]="creds.email" name="email"
+                  [formControl]="email" required>
+                <div class="valid-feedback">
+                  ok
+                </div>
+                <div class="invalid-feedback">
+                  Necessario um email
+                </div>
+              </div>
+              <div class="mb-3 col-lg-6">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input style="max-width: 800;min-width:  200px;" type="password" class="form-control"
+                  id="exampleInputPassword1" [(ngModel)]="creds.senha" name="senha" [formControl]="senha" required>
+              </div>
+
+              <button (click)="logar()" [disabled]="!validaCampos()" class="btn btn-primary"
+                style="width: 10rem;">Login</button>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+  </div>
+</div>

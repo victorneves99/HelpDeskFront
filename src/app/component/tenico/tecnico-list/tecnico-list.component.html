@@ -1,0 +1,29 @@
+<div class="row justify-content-center align-items-center  ">
+  <div class="col-lg-6 col-md-6 col-sm-12">
+    <main class="d-flex justify-content-center align-items-center ">
+      <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nome</th>
+            <th scope="col">CPF</th>
+            <th scope="col">Email</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let tecnicos of list">
+            <th scope="row">{{tecnicos.id}}</th>
+            <td>{{tecnicos.nome}}</td>
+            <td>{{tecnicos.cpf}}</td>
+            <td>{{tecnicos.email}}</td>
+            <td>
+              <button type="button" class="btn btn-primary">Primary</button>
+              <button type="button" class="btn btn-danger ms-3">Danger</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+  </div>
+</div>
